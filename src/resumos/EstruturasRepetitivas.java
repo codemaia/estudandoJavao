@@ -153,7 +153,7 @@ essas informações conforme exemplo (use a palavra "in" para dentro do interval
 		 * 
 		 * Ler um número inteiro N e calcular todos os seus divisores.
 		 * 
-		 */
+		 
 		
 		int N = sc.nextInt();
 		
@@ -164,9 +164,43 @@ essas informações conforme exemplo (use a palavra "in" para dentro do interval
 			}
 		}
 		
+		*/
+		
+		 
+		// MANIPULANDO STRINGS ######################################
+		
+		/*
+		String original = "abcde FGHIJ ABC abc DEFG ";
+		String s01 = original.toLowerCase(); // minusculo
+		String s02 = original.toUpperCase(); // maiusculo
+		String s03 = original.trim(); // retirar espaços em branco
+		String s04 = original.substring(2); // lê a string a partir do index passado
+		String s05 = original.substring(2, 9); // lê a string a partir do index passado e va até o segundo index passado
+		String s06 = original.replace('a', 'x'); // substitui caracter
+		String s07 = original.replace("abc", "xy"); // substitui caracter
+		int i = original.indexOf("bc"); // index da primeira ocorrência
+		int j = original.lastIndexOf("bc"); // index da ultima ocorrência
+		System.out.println("Original: -" + original + "-");
+		System.out.println("toLowerCase: -" + s01 + "-");
+		System.out.println("toUpperCase: -" + s02 + "-");
+		System.out.println("trim: -" + s03 + "-");
+		System.out.println("substring(2): -" + s04 + "-");
+		System.out.println("substring(2, 9): -" + s05 + "-");
+		System.out.println("replace('a', 'x'): -" + s06 + "-");
+		System.out.println("replace('abc', 'xy'): -" + s07 + "-");
+		System.out.println("Index of 'bc': " + i);
+		System.out.println("Last index of 'bc': " + j);
+		*/
 		
 		
 		
+		// FUNÇÕES #################################
+		
+		/**
+		 * 
+		 * 
+		 * 
+		 */
 		
 		
 		
