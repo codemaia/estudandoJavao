@@ -197,14 +197,55 @@ essas informações conforme exemplo (use a palavra "in" para dentro do interval
 		// FUNÇÕES #################################
 		
 		/**
-		 * 
-		 * 
-		 * 
+		 *  Vantagens: Modularização, delegação e reaproveitamento
+		 *  Pode receber um dado ou argumento como parametro e pode ou não retornar uma resposta
+		 *  
+		 *  Em Orientação a Objetos -> As funções em classes recebem o nome de "MÉTODOS"
+		 *  
+		 *  
+		 *  # OBS
+		 *  
+		 *  public static -> Para a função ficar visivel para todas as classes
+		 *  public static void -> VOID porque a função apenas mostra algo, retorna 'VAZIO';
+		 *  	-> Faz uma ação que não precisa ser reaproveitada pelo programa;
+		 *  
 		 */
 		
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
 		
+		int higher = max(a, b, c);
+		
+		showResult(higher);
 		
 		
 		sc.close();
 	}
+	
+	
+	public static int max(int value1, int value2, int value3) {
+		int aux;
+		
+		if (value1 > value2 && value1 > value3) {
+			aux = value1;
+		} else if (value2 > value3) {
+			aux = value2;
+		} else {
+			aux = value3;
+		}
+		
+		return aux;
+		
+	}
+	
+	
+	
+	public static void showResult(int value) {
+		
+		System.out.println("Higher = " + value);
+	}
+	
+	
+	
 }
