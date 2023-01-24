@@ -211,6 +211,7 @@ essas informações conforme exemplo (use a palavra "in" para dentro do interval
 		 *  
 		 */
 		
+		/* 
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		int c = sc.nextInt();
@@ -218,6 +219,20 @@ essas informações conforme exemplo (use a palavra "in" para dentro do interval
 		int higher = max(a, b, c);
 		
 		showResult(higher);
+		*/
+		
+		
+		
+		// PROGRAMAÇÃO ORIENTADA A OBJETOS 
+		
+		/**
+		 * 
+		 * 
+		 * 
+		 */
+		
+		
+		
 		
 		
 		sc.close();
