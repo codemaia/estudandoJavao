@@ -13,7 +13,8 @@ public class Product {
 		
 	}
 	
-	//CRIANDO CONSTRUCTOR (PERSONALIZADO)
+	//CRIANDO CONSTRUCTOR (PERSONALIZADO) - PODEMOS GERAR AUTOMATICAMENTE 
+	//COM O BOTAO DIREITO > SOURCE > GENERATE CONSTRUCTORS USING FIELDS 
 	public Product (String name, double price, int quantity) {
 		this.name = name;
 		this.price = price;
@@ -22,7 +23,6 @@ public class Product {
 	
 	
 	//CRIANDO CONSTRUTOR PERSONALIZADO - SOBRECARGA
-	
 	public Product (String name, double price) {
 		this.name = name;
 		this.price = price;
@@ -31,7 +31,8 @@ public class Product {
 	
 	
 	
-	//ENCAPSULAMENTO
+	//ENCAPSULAMENTO - PODEMOS GERAR AUTOMETICAMENTE 
+	//COM O BOTÃO DIREITO > SOURCE > GENERATE GETTERS AND SETTERS
 	public String getName() {
 		return name;
 	}
@@ -47,6 +48,10 @@ public class Product {
 	
 	public void setPrice(double price) {
 		this.price = price; 
+	}
+	
+	public int getQuantity() {
+		return quantity;
 	}
 	// FIM ENCAPSULAMENTO
 	

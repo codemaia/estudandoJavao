@@ -30,6 +30,7 @@ public class ProgramProduct {
 		
 		//CHAMANDO E INSTANCIANDO O CONSTRUCTOR
 		Product product = new Product(name, price);
+		
 				
 		//TESTE DE EMCAPSULAMENTO:
 		product.setName("Computer");
