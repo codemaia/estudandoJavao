@@ -268,6 +268,12 @@ essas informações conforme exemplo (use a palavra "in" para dentro do interval
 		 *	public static final double PI = 3.14159;
 		 *		//uma const é escrita com todas as letras maiusculas
 		 *		//e não utilizamos camelCase e sim _ -> NET_SALARY
+		 *
+		 *	
+		 *	# resumao
+		 *	# metodos estaticos são utilizados quando precisamos usar a função
+		 *	# em 'coisas' que não vão mudar o seu valor
+		 *	
 		 * 	
 		 */
 
