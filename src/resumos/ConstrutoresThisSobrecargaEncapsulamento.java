@@ -73,6 +73,53 @@ public class ConstrutoresThisSobrecargaEncapsulamento {
 		 * 
 		 */
 		
+		
+		
+		
+		//EMCAPSULAMENTO ######################
+		
+		/*
+		 * EMCAPSULAMENTO é um principio que consiste em esconder detalhes de implementação
+		 *  de uma classe, expondo apenas operações seguras e que mantenham os objetos em
+		 *  um estado consistente
+		 *  
+		 *  REGRA DE OURO: O objeto deve sempre estar em um estado consistente, e a própria
+		 *   classe deve garantir isso.
+		 *   
+		 *   ANALOGIA: UM APARELHO DE SOM
+		 *   # ficam expostas para o usuario somente as opções que nao vao danificar o aparelho
+		 *   como: tocar CD, passar musica, retroceder musica, pausar e etc.
+		 *   
+		 *   # as partes de circuito ficam escondidas para que o usuário não faça algo de errado
+		 *    e até queime o aparelho
+		 *    
+		 *    
+		 *   # REGRA BASICA:
+		 *   
+		 *   -> Um objeto NÃO deve expor nenhum atributo (modificador de acesso PRIVATE)
+		 *   -> Os atributos devem ser acessados por meio de métodos get e set
+		 *   	- Padrão JavaBeans: https://en.wikipedia.org/wiki/JavaBeans
+		 *   
+		 *   
+		 *   
+		 *   ## FEITA ALTERAÇÃO NO PROGRAMA: 
+		 *   
+		 *   	ProgramProduct
+		 *   
+		 *   ## FEITA ALTERAÇÃO NA CLASSE:
+		 *   
+		 *   	Product
+		 *   
+		 *   ## PARA FAZER O EMCAPSULAMENTO (get e set)
+		 * 
+		 */
+		
+		
+		
+	
+		
+		
+		
 
 	}
 

@@ -31,6 +31,14 @@ public class ProgramProduct {
 		//CHAMANDO E INSTANCIANDO O CONSTRUCTOR
 		Product product = new Product(name, price);
 				
+		//TESTE DE EMCAPSULAMENTO:
+		product.setName("Computer");
+		System.out.println("Update product: " + product.getName());
+		
+		product.setPrice(1200.00);;
+		System.out.println("Update price: " + product.getPrice());
+		
+		
 		
 		System.out.println();
 		System.out.println("Product data: " + product); // criamos o metodo toString e sobrescrevemos o
