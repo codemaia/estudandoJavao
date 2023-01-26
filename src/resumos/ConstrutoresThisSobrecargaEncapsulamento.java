@@ -78,7 +78,7 @@ public class ConstrutoresThisSobrecargaEncapsulamento {
 		
 		//EMCAPSULAMENTO ######################
 		
-		/*
+		/**
 		 * EMCAPSULAMENTO é um principio que consiste em esconder detalhes de implementação
 		 *  de uma classe, expondo apenas operações seguras e que mantenham os objetos em
 		 *  um estado consistente
@@ -116,7 +116,28 @@ public class ConstrutoresThisSobrecargaEncapsulamento {
 		
 		
 		
-	
+		
+		
+		
+		//MODIFICADORES DE ACESSO ######################
+		
+		/**
+		 * https://docs.oracle.com/javase/tutorial/java/javaOO/acesscontrol.html
+		 * 
+		 * # private: o membro só pode ser acessado na PROPRIA CLASS
+		 * 
+		 * # (nada): o membro só pode ser acessado nas CLASSES DO MESMO PACOTE
+		 * 
+		 * # protected: o membro só pode ser acesso NO MESMO PACOTE, bem como em
+		 * 				SUBCLASSES(herança) DE PACOTES DIFERENTES
+		 * 
+		 * # public: o membro é ACESSADO POR TODAS AS CLASSES (ao menos que ele resida em
+		 * 			 um módulo diferente que não exporte o pacote onde ele está)
+		 * 
+		 * 
+		 * https://i.stack.imgur.com/SVk2a.png //ILUSTRAÇÃO DOS ACESSOS;
+		 * 
+		 */
 		
 		
 		
