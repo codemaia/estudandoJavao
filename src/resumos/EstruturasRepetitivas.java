@@ -235,6 +235,49 @@ essas informações conforme exemplo (use a palavra "in" para dentro do interval
 		
 		
 		
+		//MEMBROS ESTATICOS 
+		
+		/**
+		 * 
+		 * CLASSE possui membros 
+		 * 	que são ATRIBUTOS e MÉTODOS
+		 * 
+		 * Também chamados membros de classe
+		 *  - Em oposiçao a membros e instância
+		 *  
+		 *  São membros que fazem sentido idependente do objeto.
+		 *  Não precisam de objeto para serem chamados.
+		 *  São chamados a partir do próprio nome da classe.
+		 *  
+		 *  
+		 *  Aplicações comuns:
+		 *  - Classes utilitárias ---> Math.sqrt(double)
+		 *  - Declarações de constantes
+		 *  
+		 *  
+		 *  Uma classe que possui somente membros estátios, pode ser
+		 *	 uma classe estática também.
+		 *	Esta classe não poderá ser instanciada.
+		 *
+		 *	
+		 *	DECLARAR UMA CONSTANTE:
+		 *	
+		 *	fora do main declarar:
+		 *	EX: PI
+		 *	
+		 *	public static final double PI = 3.14159;
+		 *		//uma const é escrita com todas as letras maiusculas
+		 *		//e não utilizamos camelCase e sim _ -> NET_SALARY
+		 * 	
+		 */
+
+
+		//EXEMPLO: 
+		
+		 
+		
+		
+		
 		sc.close();
 	}
 	
