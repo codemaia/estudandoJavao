@@ -40,6 +40,25 @@ public class ConstrutoresThisSobrecargaEncapsulamento {
 		
 		
 		
+		
+		//PALAVRA THIS ######################
+		
+		
+		/**
+		 * THIS serve para diferenciar o atributo do objeto do parametro do constructor
+		 * 
+		 * THIS é uma referencia para o proprio objto
+		 * 
+		 * USOS COMUNS:
+		 * 	Diferenciar atributos de variaveis locais
+		 * 	Passar o proprio objeto como argumento na chamada
+		 * 		de um metodo ou construtor
+		 * 
+		 * 
+		 */
+
+		
+		
 
 	}
 
