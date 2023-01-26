@@ -7,6 +7,8 @@ public class ConstrutoresThisSobrecargaEncapsulamento {
 		//CONSTRUTORES ######################
 		
 		/**
+		 * É Executado a partir do comando new ...
+		 * 
 		 * É uma operação especial da classe, que executa no momento da
 		 * instanciação do objeto
 		 * 
@@ -47,7 +49,7 @@ public class ConstrutoresThisSobrecargaEncapsulamento {
 		/**
 		 * THIS serve para diferenciar o atributo do objeto do parametro do constructor
 		 * 
-		 * THIS é uma referencia para o proprio objto
+		 * THIS é uma referencia para o proprio objeto
 		 * 
 		 * USOS COMUNS:
 		 * 	Diferenciar atributos de variaveis locais
@@ -58,6 +60,18 @@ public class ConstrutoresThisSobrecargaEncapsulamento {
 		 */
 
 		
+		
+		
+		//SOBRECARGA ######################
+		
+		/**
+		 * SOBRECARGA é um recurso que uma classe possui de oferecer mais de uma
+		 * 	operação com o mesmo nome, porém com diferentes listas de parâmetros.
+		 * 
+		 * Nota: é possível também incluir um construtor padrão
+		 * 
+		 * 
+		 */
 		
 
 	}

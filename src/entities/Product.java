@@ -6,13 +6,30 @@ public class Product {
 	public double price;
 	public int quantity;
 	
-	//CRIANDO CONSTRUCTOR
+	// SOBRECARGA
+	//CRIANDO CONSTRUCTOR (PADRAO)
+	public Product() {
+		
+	}
 	
+	//CRIANDO CONSTRUCTOR (PERSONALIZADO)
 	public Product (String name, double price, int quantity) {
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
 	}
+	
+	
+	//CRIANDO CONSTRUTOR PERSONALIZADO - SOBRECARGA
+	
+	public Product (String name, double price) {
+		this.name = name;
+		this.price = price;
+		//por padrão o java ja cria variaveis double e int iniciando com 0;
+	}
+	
+	
+	
 	
 	public double totalValueInStock () {
 		return price * quantity;

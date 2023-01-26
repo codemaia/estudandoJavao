@@ -48,6 +48,7 @@ import util.Calculator;
 		 *	SEM PRECISAR INSTANCIAR. :D
 		 * 	
 		 */
+
 public class ProgramMetodosEstaticos {
 
 	public static void main(String[] args) {

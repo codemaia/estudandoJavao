@@ -15,16 +15,21 @@ public class ProgramProduct {
 
 		//ADD CONSTRUCTORS
 		
+		//COMO DECLARAMOS UM CONSTRUCTOR PADRÃO, PODEMOS CHAMA-LO SEM PROBLEMA
+		Product p = new Product();
+		
 		System.out.println("Enter product data:");
 		System.out.print("Name: ");
 		String name = sc.nextLine(); //CRIANDO VARIAVEL AUXILIAR PARA O CONSTRUCTOR
 		System.out.print("Price: ");
 		double price = sc.nextDouble(); //CRIANDO VARIAVEL AUXILIAR PARA O CONSTRUCTOR
-		System.out.print("Quantity in stock: ");
-		int quantity = sc.nextInt(); //CRIANDO VARIAVEL AUXILIAR PARA O CONSTRUCTOR
 		
-		//CHAMANDO E INSTANCIAND O CONSTRUCTOR
-		Product product = new Product(name, price, quantity);
+		//ALTERADO PARA CONSTRUCTOR - SOBRECARGA
+		//System.out.print("Quantity in stock: ");
+		//int quantity = sc.nextInt(); //CRIANDO VARIAVEL AUXILIAR PARA O CONSTRUCTOR
+		
+		//CHAMANDO E INSTANCIANDO O CONSTRUCTOR
+		Product product = new Product(name, price);
 				
 		
 		System.out.println();
@@ -34,7 +39,8 @@ public class ProgramProduct {
 		//System.out.println("Product data: " + product.name + ", $ " + product.price + ", " + product.quantity + " units, Total: " + product.totalValueInStock());
 		System.out.println();
 		System.out.print("Enter the number of products to be added in stock: ");
-		quantity = sc.nextInt();
+		
+		int quantity = sc.nextInt(); // ALTERADO PARA CONSTRUCTOR - SOBRECARGA
 		product.addProducts(quantity);
 		
 		System.out.println();
