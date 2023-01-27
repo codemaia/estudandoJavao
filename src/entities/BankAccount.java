@@ -3,9 +3,15 @@ package entities;
 public class BankAccount {
 	
 	private int numberAccount;
-	public String userName;
+	private String userName;
 	private double accountBalance;
 	
+	
+	public BankAccount (int numberAccount , String userName, double initialDeposit) {
+		this.numberAccount = numberAccount;
+		this.userName = userName;
+		deposit(initialDeposit);
+	}
 	
 	public int getNumberAccount() {
 		return numberAccount;
@@ -23,26 +29,21 @@ public class BankAccount {
 		this.accountBalance = accountBalance;
 	}
 	
-	public BankAccount (int numberAccount , String userName) {
-		this.numberAccount = numberAccount;
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
 		this.userName = userName;
 	}
 	
-	
-	/*
-	public void createAccount(int numberAccount, String userName, double accountBalance) {
-		this.numberAccount = numberAccount;
-		this.userName = userName;
-		this.accountBalance = accountBalance;
-	}
-	*/
-	
-	public double deposit(double value) {
-		return this.accountBalance += value;
+	public void deposit(double value) {
+		accountBalance += value;
 	}
 	
-	public double draft (double value) {
-		return this.accountBalance - value - 5.00;
+	public void withdraw (double value) {
+		accountBalance -= value + 5.00;
 	}
+
 	
 }

@@ -12,21 +12,34 @@ public class ProgramBankAccount {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
+		BankAccount bankAccount;
 		
 		System.out.print("Enter account number: ");
 		int numberAccount = sc.nextInt();
+		
 		System.out.print("Enter account holder: ");
+		sc.nextLine();
 		String userName = sc.nextLine();
-		//System.out.print("Enter initial deposit value: ");
-		//double depositValue = sc.nextDouble();
 		
-		BankAccount bankAccount = new BankAccount(numberAccount, userName);
+		System.out.print("Is there na intial deposit (y/n) ");
+		char response = sc.next().charAt(0);
+		if (response == 'y') {
+			System.out.println("Enter initial deposit value: ");
+			double initialDeposit = sc.nextDouble();
+			bankAccount = new BankAccount (numberAccount, userName, initialDeposit);
+		}
 		
 		
 		
 		
-		System.out.println("Account data:");
-		System.out.println("Account " + bankAccount.getNumberAccount() + ", Holder: " + bankAccount.userName + ", Balance: $ " );//+ depositValue);
+		BankAccount bankAccount = new BankAccount(numberAccount, userName, accountBalance);
+		
+		System.out.println(bankAccount.getNumberAccount());
+		System.out.println(bankAccount.getUserName());
+		System.out.println(bankAccount.getAccountBalance());	
+		
+		//System.out.println("Account data:");
+		//System.out.println("Account " + bankAccount.getNumberAccount() + ", Holder: " + bankAccount.userName + ", Balance: $ " );//+ depositValue);
 		
 		
 		
