@@ -27,12 +27,13 @@ public class ProgramBankAccount {
 			System.out.println("Enter initial deposit value: ");
 			double initialDeposit = sc.nextDouble();
 			bankAccount = new BankAccount (numberAccount, userName, initialDeposit);
+			bankAccount.deposit(initialDeposit);
 		}
 		
 		
+		System.out.println(bankAccount.getNumberAccount());
 		
 		
-		BankAccount bankAccount = new BankAccount(numberAccount, userName, accountBalance);
 		
 		System.out.println(bankAccount.getNumberAccount());
 		System.out.println(bankAccount.getUserName());
