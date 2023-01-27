@@ -23,24 +23,37 @@ public class ProgramBankAccount {
 		
 		System.out.print("Is there na intial deposit (y/n) ");
 		char response = sc.next().charAt(0);
+		
 		if (response == 'y') {
-			System.out.println("Enter initial deposit value: ");
+			
+			System.out.print("Enter initial deposit value: ");
 			double initialDeposit = sc.nextDouble();
 			bankAccount = new BankAccount (numberAccount, userName, initialDeposit);
-			bankAccount.deposit(initialDeposit);
+			
+		} else {
+			
+			bankAccount = new BankAccount(numberAccount, userName);
 		}
+		System.out.println();
 		
 		
-		System.out.println(bankAccount.getNumberAccount());
+		System.out.println("Account data: ");
+		System.out.println(bankAccount);
+		System.out.println();
 		
+		System.out.print("Enter a deposit value: ");
+		double depositValue = sc.nextDouble();
+		bankAccount.deposit(depositValue);
+		System.out.println("Update account data:");
+		System.out.print(bankAccount);
+		System.out.println();
+		System.out.println();
 		
-		
-		System.out.println(bankAccount.getNumberAccount());
-		System.out.println(bankAccount.getUserName());
-		System.out.println(bankAccount.getAccountBalance());	
-		
-		//System.out.println("Account data:");
-		//System.out.println("Account " + bankAccount.getNumberAccount() + ", Holder: " + bankAccount.userName + ", Balance: $ " );//+ depositValue);
+		System.out.print("Enter a withdraw value: ");
+		double withdrawValue = sc.nextDouble();
+		bankAccount.withdraw(withdrawValue);
+		System.out.println("Updated account data:");
+		System.out.println(bankAccount);
 		
 		
 		

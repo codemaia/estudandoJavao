@@ -7,10 +7,15 @@ public class BankAccount {
 	private double accountBalance;
 	
 	
-	public BankAccount (int numberAccount , String userName, double initialDeposit) {
+	public BankAccount (int numberAccount, String userName, double initialDeposit) {
 		this.numberAccount = numberAccount;
 		this.userName = userName;
 		deposit(initialDeposit);
+	}
+	
+	public BankAccount (int numberAccount, String userName) {
+		this.numberAccount = numberAccount;
+		this.userName = userName;
 	}
 	
 	public int getNumberAccount() {
@@ -45,5 +50,7 @@ public class BankAccount {
 		accountBalance -= value + 5.00;
 	}
 
-	
+	public String toString() {
+		return "Account " + numberAccount + ", Holder: " + userName + ", Balance: $ " + accountBalance;
+	}
 }
