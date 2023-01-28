@@ -1,11 +1,15 @@
 package resumos;
 
+import java.util.Locale;
 import java.util.Scanner;
+
+import entities.ProductVetorArray;
 
 public class ComportamentoDeMemoriaArraysListas {
 
 	public static void main(String[] args) {
 		
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
 		
@@ -61,18 +65,73 @@ public class ComportamentoDeMemoriaArraysListas {
 		
 		
 		
-		// VETORES
+		// VETORES (ARRAYS)
 		
 		/**
+		 * # Vantagens
+		 * 	- Acesso imediato aos elementos pela sua posição
 		 * 
-		 * 
+		 * # Desvantagens
+		 *  - Tamanho fixo (precisamos alocar previamente o tamanho que precisamos)
+		 *  - Dificuldade para se realizar inserções e deleções.
 		 * 
 		 * 
 		 */
 		
 		
+		//EXEMPLO VETOR (COM VARIAVEIS)
+		
+		/*
+		int n = sc.nextInt();
+		
+		//CRIANDO VETOR / ARRAY
+		double[] vect = new double[n];
+		
+		for (int i = 0; i < n; i++) {
+			vect[i] = sc.nextDouble();
+		}
+		
+		double sum = 0.0;
+		
+		for (int i = 0; i < n; i++) {
+			sum += vect[i];
+		}
+		
+		double avg = sum / n;
+		
+		System.out.print("AVERAGE HEIGHT: " + avg);
+		*/
+		
+		
+		
+	// CRIANDO VETORES (ARRAYS) COM ELEMENTOS DE OBJETOS TIPO CLASSE
+		
+		int n = sc.nextInt();
+		
+		//declarar vetor de objeto tipo classe
+		ProductVetorArray[] vect = new ProductVetorArray[n];
+		
+		for (int i = 0; i < vect.length; i++) {
+			sc.nextLine();
+			String name = sc.nextLine();
+			double price = sc.nextDouble();
+			
+			vect[i] = new ProductVetorArray(name, price); 
+			
+		}
+		
+		double sum = 0.0;
+		
+		for (int i = 0; i < vect.length; i++) {
+			sum += vect[i].getPrice();
+		}
+		
+		double avg = sum / vect.length;
+		
+		System.out.print("AVERAGE HEIGHT: " + avg);
 		
 		sc.close();
+		
 
 	}
 
