@@ -3,6 +3,8 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.PessoaExerciseVetor;
+
 public class ProgramExerciseVetores {
 
 	public static void main(String[] args) {
@@ -73,6 +75,7 @@ public class ProgramExerciseVetores {
 		
 		//PROBLEMA "ALTURAS"
 		
+		/*
 		int n;
 		
 		System.out.print("Quantas pessoas sera digitadas? ");
@@ -129,8 +132,67 @@ public class ProgramExerciseVetores {
 				System.out.println(vectName[i]);
 			}
 		}
+		*/
 		
 		
+		
+		// PROBLEMA "ALTURAS" - COM CLASSE
+		
+		System.out.print("Quantas pessoas sera digiadas? ");
+		int n = sc.nextInt();
+		
+		PessoaExerciseVetor[] vect = new PessoaExerciseVetor[n];
+		
+		for (int i = 0; i < n; i++) {
+			System.out.println("Dadodos da " + (i+1) + "a pessoa:");
+			sc.nextLine();
+			
+			System.out.print("Nome: ");
+			String nome = sc.nextLine();
+			
+			System.out.print("Idade: ");
+			int idade = sc.nextInt();
+			
+			System.out.print("Altura: ");
+			double altura = sc.nextDouble();
+			
+			vect[i] = new PessoaExerciseVetor(nome, idade, altura);
+		}
+		
+		
+		System.out.println();
+		
+		double sum = 0.0;
+		
+		for (int i = 0; i < n; i++) {
+			
+			sum += vect[i].getAltura();
+		}
+		
+		double avg = sum / n;
+		
+		System.out.printf("Altura média: %.2f", avg);
+		System.out.println();
+		
+		int count = 0;
+		
+		for (int i = 0; i < n; i++) {
+			if (vect[i].getIdade() < 16) {
+				count++;
+			}
+			
+		}
+		
+		double percent = 100 * count / n;
+		
+		System.out.print("Pessoas com menos de 16 anos: " + percent + "%");
+		System.out.println();
+		
+		for (int i = 0; i < n; i++) {
+			if (vect[i].getIdade() < 16) {
+				System.out.println(vect[i].getNome());
+			}
+		}
 		
 		sc.close();
 
