@@ -235,6 +235,71 @@ public class ProgramExerciseVetores {
 		
 		
 		
+		//PROBLEMA "MAIOR_POSICAO"
+		
+		/*
+		int n, index = 0;
+		
+		System.out.print("Quantos numeros voce vai digitar?");
+		n = sc.nextInt();
+		
+		double numeroMaior = 0.0;
+		double numbers;
+		double[] vect = new double[n];
+		
+		for (int i = 0; i < n; i++) {
+			System.out.print("Digite um numero: ");
+			numbers = sc.nextDouble();
+			vect[i] = numbers;
+			
+			if (numbers > numeroMaior && vect[i] > numeroMaior ) {
+				numeroMaior = numbers;
+				index = i;
+			}
+		}
+		
+		System.out.println();
+		System.out.print("MAIOR VALOR = " + numeroMaior);
+		System.out.println();
+		System.out.print("POSICAO DO MAIOR VALOR = " + index);
+		*/
+		
+		
+		
+		
+		// PROBLEMA "SOMA_VETORES"
+		
+		
+		int n;
+		System.out.print("Quantos valores vai ter cada vetor? ");
+		n = sc.nextInt();
+		
+		int[] vectA = new int[n];
+		int[] vectB = new int[n];
+		int[] vectC = new int[n];
+		
+		
+		System.out.println("Digite os valores do vetor A: ");
+		for (int i = 0; i < vectA.length; i++) {
+			int number = sc.nextInt();
+			vectA[i] = number;
+		}
+		 
+		System.out.println("Digite os valores do vetor B: ");
+		for (int i = 0; i < vectB.length; i++) {
+			int number = sc.nextInt();
+			vectB[i] = number;
+		}
+		
+		
+		System.out.println("VETOR RESULTATE:");
+		for (int i = 0; i < vectC.length; i++) {
+			vectC[i] = vectA[i] + vectB[i];
+			System.out.println(vectC[i]);
+		}
+		
+		
+		
 		sc.close();
 
 	}
