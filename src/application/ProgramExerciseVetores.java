@@ -96,10 +96,40 @@ public class ProgramExerciseVetores {
 			System.out.print("Altura: ");
 			vectAltura[i] = sc.nextDouble();
 		}
+		System.out.println();
+		
+		double sum = 0;
 		
 		for (int i = 0; i < n; i++) {
-			System.out.println("result: "+ vectName[i] + ", " + vectIdade[i] + ", "+ vectAltura[i]);
+			
+			sum += vectAltura[i];
 		}
+		
+		double avg = sum / n;
+		
+		System.out.printf("Altura média: %.2f", avg);
+		System.out.println();
+		
+		System.out.print("Pessoas com menos de 16 anos: ");
+		
+		int count = 0;
+		
+		for (int i = 0; i < n; i++) {
+			if (vectIdade[i] < 16) {
+				count++;
+			}
+		}
+		
+		double percent = 100 * count / n;
+		System.out.println(percent + "%");
+		
+		for (int i = 0; i < n; i++) {
+			
+			if (vectIdade[i] < 16) {
+				System.out.println(vectName[i]);
+			}
+		}
+		
 		
 		
 		sc.close();
