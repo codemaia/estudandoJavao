@@ -138,6 +138,7 @@ public class ProgramExerciseVetores {
 		
 		// PROBLEMA "ALTURAS" - COM CLASSE
 		
+		/*
 		System.out.print("Quantas pessoas sera digiadas? ");
 		int n = sc.nextInt();
 		
@@ -193,6 +194,46 @@ public class ProgramExerciseVetores {
 				System.out.println(vect[i].getNome());
 			}
 		}
+		*/
+		
+		
+		
+		
+		//PROBLEMA "NUMEROS_PARES"
+		
+		/*
+		System.out.print("Quantos numeros voce vai digitar? ");
+		int n = sc.nextInt();
+		int count = 0;
+		int[] vect = new int[n];
+		
+		
+		
+		for (int i = 0; i < vect.length; i++) {
+			System.out.print("Digite um numero: ");
+			int numbers = sc.nextInt();
+			
+			vect[i] = numbers;
+			
+		}
+		
+		System.out.println();
+		System.out.println("NUMEROS PARES:");
+
+		for (int i = 0; i < vect.length; i++) {
+			
+			if (vect[i] % 2 == 0) {
+				count++;
+				System.out.print(vect[i] + " ");
+			}
+		}
+		
+		System.out.println();
+		
+		System.out.println("QUANTIDADE DE PARES = " + count);
+		*/
+		
+		
 		
 		sc.close();
 
