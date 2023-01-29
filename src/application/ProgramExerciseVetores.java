@@ -269,7 +269,7 @@ public class ProgramExerciseVetores {
 		
 		// PROBLEMA "SOMA_VETORES"
 		
-		
+		/*
 		int n;
 		System.out.print("Quantos valores vai ter cada vetor? ");
 		n = sc.nextInt();
@@ -297,6 +297,8 @@ public class ProgramExerciseVetores {
 			vectC[i] = vectA[i] + vectB[i];
 			System.out.println(vectC[i]);
 		}
+		*/
+		
 		
 		
 		
