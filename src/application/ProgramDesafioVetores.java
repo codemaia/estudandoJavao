@@ -39,7 +39,7 @@ public class ProgramDesafioVetores {
 		System.out.println("Busy rooms:");
 		for (int i = 0; i < 10; i++) 
 			if (vect[i] != null) {
-				System.out.println(i + ": " + vect[i] ); //mostrar o index mais o conteudo do array
+				System.out.println(i + ": " + vect[i] ); //mostar o index do array
 			}
 		
 		sc.close();

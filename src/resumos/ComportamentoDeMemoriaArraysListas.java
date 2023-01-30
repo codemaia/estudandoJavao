@@ -106,6 +106,7 @@ public class ComportamentoDeMemoriaArraysListas {
 		
 	// CRIANDO VETORES (ARRAYS) COM ELEMENTOS DE OBJETOS TIPO CLASSE
 		
+		/*
 		int n = sc.nextInt();
 		
 		//declarar vetor de objeto tipo classe
@@ -129,10 +130,88 @@ public class ComportamentoDeMemoriaArraysListas {
 		double avg = sum / vect.length;
 		
 		System.out.print("AVERAGE HEIGHT: " + avg);
+		*/
+		
+		
+		
+		
+		
+		//BOXING, UNBOXING E WRAPPER CLASSES
+		
+		/*
+		 * BOXING: É o processo de conversão de um objeto tipo valor
+		 *  para um objeto tipo referência compatível
+		 * 
+		 * 
+		 * UNBOXING: É o processo de conversão de um objeto tipo referência
+		 * 	para um objeto tipo valor compatível.
+		 * 
+		 * 
+		 *  WRAPPER CLASSES:
+		 *  - São classes equivalentes aos tipos primitivos
+		 *   int -> primitivo (não aceita nulo)
+		 *   Integer -> Wrapper class (aceita nulo) (tipo referencia)
+		 *   
+		 *   double -> primitivo (não aceita nulo)
+		 *   Double -> Wrapper class (aceita nulo) (tipo referencia)
+		 *   
+		 *  - Boxing e Unboxing é natural na linguagem
+		 *  - Uso Comum: Campos de entidades em sistemas de informação
+		 *  	Pois tipos referência (classes) aceitam valor null e
+		 *  	usufruem dos recursos OO
+		 */
+		
+		/*
+		int x = 20;		
+		Object obj = x;
+		System.out.println(obj);
+		
+		int y = (int) obj;
+		System.out.println(y);
+		
+		
+		
+		//WRAPPER CLASS:
+		
+		Integer x = 10;
+		int y = x * 2;
+		
+		//EX CLASS:
+		
+		public class Prod {
+			public String nome;
+			public Double price;
+			public Integer quantity;
+		}
+		*/
+	
+		
+		
+		
+		
+		//LAÇO FOR EACH
+		
+		/**
+		 * SINTAXE
+		 * 
+		 * for (TIPO APELIDO : COLECAO  {
+		 * 
+		 * }
+		 * 
+		 * 
+		 */
+		
+		/*
+		String[] vect = new String[] {"Livia", "Tita", "Brisa", "Marcia"};
+		
+		
+		for (String name : vect) {
+			System.out.println(name);
+		}
+		
+		*/
 		
 		sc.close();
-		
-
 	}
 
 }
