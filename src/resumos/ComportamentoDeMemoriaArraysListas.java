@@ -211,6 +211,35 @@ public class ComportamentoDeMemoriaArraysListas {
 		
 		*/
 		
+		
+		
+		
+		//LISTAS - PARTE 1
+		
+		/**
+		 * # Lista é uma estrutura de dados:
+		 * 	- Homogenea (dados do mesmo tipo)
+		 *  - Ordenada (elementos acessados por meio de posiçoes)
+		 *  - Inicia vazia, e seus elementos são alocados sob demanda
+		 *  - Cada elemento ocupa um "nó" (ou nodo) da lista
+		 *  
+		 * # Tipo (Interface): List
+		 * # Classes que implementam: ArrayList, LinkedList, etc.
+		 * 
+		 * # Vantagem:
+		 *  - Tamanho variável
+		 *  - Facilidade para se realizar inserção e deleções
+		 *  
+		 * # Desvantagens:
+		 * 	- Acesso sequencial aos elementos
+		 * 
+		 * 
+		 * 
+		 */
+		
+		
+		
+		
 		sc.close();
 	}
 
