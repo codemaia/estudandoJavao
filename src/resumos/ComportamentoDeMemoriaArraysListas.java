@@ -214,7 +214,7 @@ public class ComportamentoDeMemoriaArraysListas {
 		
 		
 		
-		//LISTAS - PARTE 1
+		//LISTAS - 
 		
 		/**
 		 * # Lista é uma estrutura de dados:
@@ -236,6 +236,21 @@ public class ComportamentoDeMemoriaArraysListas {
 		 * 
 		 * 
 		 */
+		
+		/* # COMANDOS IMPORTANTES - LISTA - ARRAY
+		 * 
+		 * @ TAMANHO DA LISTA: size()
+		 * @ INSERIR ELEMENTO NA LISTA: add(obj), add(int, obj)
+		 * @ REMOVER ELEMENTOS DA LISTA: remove(obj), remove(int), removeIf(Predicate)
+		 * @ ENCONTRAR POSICAO DE ELEMENTO: indexOf(obj), lastIndexOf(obj)
+		 * @ FILTRAR LISTA COM BASE EM PREDICADO:
+		 * List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList())
+		 * 
+		 * @ ENCONTRAR PRIMEIRA OCORRENCIA COM BASE EM PREDICADO:
+		 * Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null).
+		 * 
+		 */
+		
 		
 		
 		
