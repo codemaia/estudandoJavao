@@ -300,8 +300,6 @@ public class ProgramExerciseVetores {
 		*/
 		
 		
-		
-		
 		sc.close();
 
 	}
