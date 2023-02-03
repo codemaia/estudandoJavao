@@ -1,9 +1,12 @@
 package resumos;
 
+
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-
-import entities.ProductVetorArray;
+import java.util.stream.Collectors;
 
 public class ComportamentoDeMemoriaArraysListas {
 
@@ -251,9 +254,47 @@ public class ComportamentoDeMemoriaArraysListas {
 		 * 
 		 */
 		
+		List<String> list = new ArrayList<>();
+		
+		list.add("Maria");
+		list.add("Alex");
+		list.add("Bob");
+		list.add("Anna");
+		list.add(2, "Marco");
 		
 		
+		System.out.println(list.size());
 		
+		for (String names : list) {
+			System.out.println(names);
+		}
+		
+		System.out.println("-------------------");
+		//remover
+		list.removeIf(x -> x.charAt(0) == 'M');
+		for (String names : list) {
+			System.out.println(names);
+		}
+		System.out.println("-------------------");
+		
+		//achar o index:
+		System.out.println(list.indexOf("Bob"));
+		
+		//quando não achar o index retorna -1
+		System.out.println(list.indexOf("Marco"));
+		
+		System.out.println("-------------------");
+		
+		//Filtrar
+		List<String> result = list.stream().filter(x -> x.charAt(0) == 'A' ).collect(Collectors.toList());
+		System.out.println(result);
+		for (String names : result) {
+			System.out.println(names);
+		}
+		System.out.println("-------------------");
+		
+		String name = list.stream().filter(x -> x.charAt(1) == 'w' ).findFirst().orElse("tem nao");
+		System.out.println(name);
 		
 		sc.close();
 	}
