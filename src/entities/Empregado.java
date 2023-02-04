@@ -34,8 +34,8 @@ public class Empregado {
 		return salary;
 	}
 	
-	public Double increaseSalary (Double value) {
-		return this.salary += this.salary * value/100; 
+	public void increaseSalary (Double value) {
+		salary += salary * value/100; 
 	}
 	
 	
