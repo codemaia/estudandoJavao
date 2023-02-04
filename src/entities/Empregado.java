@@ -34,23 +34,13 @@ public class Empregado {
 		return salary;
 	}
 	
-	public void setSalary(Double salary) {
-		this.salary =  salary;
-	}
-	
-	
 	public Double increaseSalary (Double value) {
-		return value;
+		return this.salary += this.salary * value/100; 
 	}
-
 	
-	@Override
+	
 	public String toString() {
-		return  id 
-				+ ", " 
-				+ name 
-				+ ", " 
-				+ salary;
+		return  id + ", " + name + ", " + salary;
 	}
 	
 	
