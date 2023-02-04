@@ -37,10 +37,20 @@ public class Empregado {
 	public void setSalary(Double salary) {
 		this.salary =  salary;
 	}
+	
+	
+	public Double increaseSalary (Double value) {
+		return value;
+	}
 
+	
 	@Override
 	public String toString() {
-		return "Empregado [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+		return  id 
+				+ ", " 
+				+ name 
+				+ ", " 
+				+ salary;
 	}
 	
 	
