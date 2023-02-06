@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -22,8 +23,13 @@ public class ProgramEmployeeList {
 		for (int i = 0; i < n; i++) {
 			System.out.println();
 			System.out.println("Employee #" + (i+1));
+			
 			System.out.print("Id: ");
 			int id = sc.nextInt();
+			while(hasId(list, id)) {
+				System.out.print("Id already taken. Try again: ");
+				id = sc.nextInt();
+			}
 			
 			System.out.print("Name: ");
 			sc.nextLine();
@@ -55,9 +61,9 @@ public class ProgramEmployeeList {
 		
 		System.out.println();
 		System.out.println("List of employees: ");
-		for (EmployeeList x : list) {
+		for (EmployeeList obj : list) {
 			
-			System.out.println(x);
+			System.out.println(obj);
 		}
 		
 		
@@ -67,4 +73,15 @@ public class ProgramEmployeeList {
 
 	}
 
+	
+	public static boolean hasId(List<EmployeeList> list, int id) {
+		EmployeeList emp = list.stream()
+						   .filter(x -> x.getId() == id)
+						   .findFirst()
+						   .orElse(null);
+		
+		return emp != null;
+	}
+	
+	
 }
