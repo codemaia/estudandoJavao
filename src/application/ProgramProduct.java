@@ -16,7 +16,7 @@ public class ProgramProduct {
 		//ADD CONSTRUCTORS
 		
 		//COMO DECLARAMOS UM CONSTRUCTOR PADRÃO, PODEMOS CHAMA-LO SEM PROBLEMA
-		Product p = new Product();
+//		Product p = new Product();
 		
 		System.out.println("Enter product data:");
 		System.out.print("Name: ");
