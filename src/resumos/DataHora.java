@@ -137,6 +137,32 @@ public class DataHora {
 		System.out.println("d06 minuto = " + d05.getMinute());
 		
 		
+		
+		// CALCULOS COM DATA-HORA
+		
+		/**
+		 * minusDays(quatidade)
+		 * plusDays(quantidade)
+		 * 
+		 * #Instant
+		 * 
+		 * d06.minus(quantidade, ChronoUnit.DAYS)
+		 * d06.plus(quantidade, ChronoUnit.DAYS)
+		 * 
+		 */
+		
+		
+		// CALCULANDO DURACAO
+		
+		/**
+		 *  Utilizar o Duration
+		 *  			- atStartOfDay => converte para as 0 horas do dia
+		 *  Duration t1 = Duration.between(dia1.atStartOfDay, dia2)
+		 * 
+		 * 
+		 */
+		
+		
 		sc.close();
 
 	}
