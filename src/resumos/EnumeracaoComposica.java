@@ -34,6 +34,7 @@ public class EnumeracaoComposica {
 		
 		//testing
 		
+		/*
 		OrderStudy orderStudy = new OrderStudy(1080, new Date(), OrderStatus.DELIVERED);
 		
 		System.out.println(orderStudy);
@@ -43,6 +44,40 @@ public class EnumeracaoComposica {
 		
 		System.out.println(os1);
 		System.out.println(os2);
+		*/
+		
+		
+		
+		
+		
+		
+		
+		// DESIGNER (IMPORTANTE)
+		
+		/**
+		 * #CATEGORIA DE CLASSES
+		 * 
+		 * 	Em um sistema orientado a objetos, de modo geral "tudo" é objeto
+		 *  
+		 *  Por questoes de design tais como organização, flexibilidade, reuso,
+		 *  delegação, etc., há várias categorias de classes.
+		 *  
+		 *  
+		 *  telas do sistema	/ clientes, pedidos... entidades de negocios
+		 *    |								|
+		 *  VIEWS      CONTROLLERS      ENTITES
+		 *  				|
+		 *  			faz a conexão
+		 *  		entre a tela e o sistema
+		 *  
+		 *  
+		 *  	SERVICES 			REPOSITORES
+		 *  		|						|
+		 *  					Objetos responsaveis por acessar os
+		 * Serviçe?     		 dados de um banco de dados.
+		 * 
+		 * 
+		 */
 		
 		sc.close();
 	}
