@@ -1,5 +1,7 @@
 package application;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -46,10 +48,31 @@ public class ProgramWork {
 		worker.setBaseSalary(baseSalary);
 		worker.setDepartment(department);
 		
-		System.out.println(worker);
+		System.out.print("How many contracts to this worker? ");
+		int n = sc.nextInt();
+		
+		for(int i = 0; i < n; i++) {
+			System.out.println("Enter contract #" + (i+1) + " data:");
+			System.out.print("Date (DD/MM/YYYY): ");
+			String dateStr = sc.next();
+			LocalDate date = LocalDate.parse(dateStr, DateTimeFormatter.ofPattern("DD/MM/YYYY"));
 			
+			
+			System.out.print("Value per hour: ");
+			Double valuePerHour = sc.nextDouble();
+			
+			System.out.print("Duration (hours): ");
+			Integer hours = sc.nextInt();
+			
+			HourContract contract = new HourContract(date, valuePerHour, hours);
+			
+			contracts.add(contract);
+			
+		}
 		
 		
+//		System.out.println(worker);
+			
 //		System.out.println(department);
 		
 		
