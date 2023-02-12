@@ -52,10 +52,11 @@ public class ProgramWork {
 		int n = sc.nextInt();
 		
 		for(int i = 0; i < n; i++) {
+			
 			System.out.println("Enter contract #" + (i+1) + " data:");
 			System.out.print("Date (DD/MM/YYYY): ");
 			String dateStr = sc.next();
-			LocalDate date = LocalDate.parse(dateStr, DateTimeFormatter.ofPattern("DD/MM/YYYY"));
+			LocalDate date = LocalDate.parse(dateStr, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 			
 			
 			System.out.print("Value per hour: ");
@@ -67,13 +68,24 @@ public class ProgramWork {
 			HourContract contract = new HourContract(date, valuePerHour, hours);
 			
 			contracts.add(contract);
+			worker.addContract(contract);	
 			
 		}
 		
+		System.out.println();
 		
-//		System.out.println(worker);
+		
+		System.out.print("Enter month and year to calculate income (MM/YYYY): ");
+		String  dateStr = sc.next();
+
+		int month = Integer.valueOf(dateStr.substring(0, 2));
+		int year = Integer.valueOf(dateStr.substring(3, 7));
+	
+		
+		System.out.print(worker);
+		System.out.println("Income for " + dateStr + ": " + worker.income(year, month));
 			
-//		System.out.println(department);
+
 		
 		
 		sc.close();

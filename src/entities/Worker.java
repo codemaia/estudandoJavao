@@ -105,11 +105,12 @@ public class Worker {
 
 	@Override
 	public String toString() {
-		return "Worker name=" + name 
-				+ ", level=" + level 
-				+ ", baseSalary=" + baseSalary 
-				+ ", department=" + department
-				+ ", contracts=" + contracts;
+		return  "Name: " + name + "\n" 
+//				+ ", level=" + level 
+//				+ ", baseSalary=" + baseSalary 
+				+ "Department: " + department + "\n";
+//				+ ", contracts=" + contracts;'
+				
 	}
 	
 	
