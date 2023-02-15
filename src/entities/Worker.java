@@ -1,5 +1,6 @@
 package entities;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -84,6 +85,21 @@ public class Worker {
 	}
 	
 	public Double income(Integer year, Integer month) {
+		Double sum = baseSalary;
+		
+		for (HourContract c : contracts) {
+			LocalDate date = LocalDate.parse(c.getDate().toString());
+			
+			int c_year = date.getYear();
+			int c_month = date.getMonthValue();
+			
+			if (year == c_year && month == c_month) {
+				sum += c.totalValue();
+			}
+			
+		}
+		
+		return sum;
 		
 	}
 	
