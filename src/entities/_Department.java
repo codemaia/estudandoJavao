@@ -1,17 +1,17 @@
 package entities;
 
-public class Department {
+public class _Department {
 	
 	private String name;
 	
-	public Department() {
+	public _Department() {
 		
 	}
-
-	public Department(String name) {
+	
+	public _Department (String name) {
 		this.name = name;
 	}
-
+	
 	public String getName() {
 		return name;
 	}
@@ -19,8 +19,12 @@ public class Department {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
-	
 
+	@Override
+	public String toString() {
+		return name;
+	}
+	
+	
+	
 }

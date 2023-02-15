@@ -1,6 +1,5 @@
 package entities;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,9 +11,10 @@ public class Worker {
 	private WorkerLevel level;
 	private Double baseSalary;
 	
-	//composições dos objetos;
+	//composição de objetos
+	
 	private Department department;
-	List<HourContract> contracts = new ArrayList<>();
+	private List<HourContract> contracts = new ArrayList<>();
 	
 	
 	public Worker() {
@@ -74,6 +74,7 @@ public class Worker {
 		return contracts;
 	}
 	
+	
 	public void addContract(HourContract contract) {
 		contracts.add(contract);
 	}
@@ -83,37 +84,8 @@ public class Worker {
 	}
 	
 	public Double income(Integer year, Integer month) {
-		Double sum = baseSalary;
-		
-		for (HourContract c : contracts) {
-			
-			LocalDate date = LocalDate.parse(c.getDate().toString());
-			
-			int c_month = date.getMonthValue();
-			int c_year = date.getYear();
-			
-			if (year == c_year && month == c_month) {
-				sum += c.totalValue();
-			}
-			
-		}
-		
-		return sum;		
 		
 	}
-
-
-	@Override
-	public String toString() {
-		return  "Name: " + name + "\n" 
-//				+ ", level=" + level 
-//				+ ", baseSalary=" + baseSalary 
-				+ "Department: " + department + "\n";
-//				+ ", contracts=" + contracts;'
-				
-	}
-	
-	
 	
 	
 }
