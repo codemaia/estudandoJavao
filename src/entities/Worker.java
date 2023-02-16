@@ -86,21 +86,21 @@ public class Worker {
 	
 	public Double income(Integer year, Integer month) {
 		Double sum = baseSalary;
+		LocalDate date;
 		
 		for (HourContract c : contracts) {
-			LocalDate date = LocalDate.parse(c.getDate().toString());
 			
+			date = c.getDate();
 			int c_year = date.getYear();
 			int c_month = date.getMonthValue();
 			
-			if (year == c_year && month == c_month) {
+			if (year == c_year && month == c_month ) {
 				sum += c.totalValue();
 			}
 			
 		}
 		
 		return sum;
-		
 	}
 	
 	
