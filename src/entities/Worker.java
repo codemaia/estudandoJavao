@@ -102,6 +102,14 @@ public class Worker {
 		
 		return sum;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Worker [name=" + name + ", level=" + level + ", baseSalary=" + baseSalary + ", department=" + department
+				+ ", contracts=" + contracts + "]";
+	}
+	
 	
 	
 }
