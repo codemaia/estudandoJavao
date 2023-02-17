@@ -62,9 +62,9 @@ public class ProgramWork {
 		System.out.println("Department: " + worker.getDepartment().getName());
 		
 		int c_month = Integer.parseInt(dateIncome.substring(0, 2));
+		int c_year = Integer.parseInt(dateIncome.substring(3));
 		
-		System.out.println(c_month);
-		
+		System.out.println("Income for " + dateIncome + ": " + worker.income(c_year, c_month));
 		sc.close();
 
 	}
