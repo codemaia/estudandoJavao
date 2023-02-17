@@ -54,8 +54,16 @@ public class ProgramWork {
 			worker.addContract(contract);
 			
 		}
+
+		System.out.println();
+		System.out.print("Enter month and year to calculate income (MM/YYYY): ");
+		String dateIncome = sc.next();
+		System.out.println("Name: " + worker.getName());
+		System.out.println("Department: " + worker.getDepartment().getName());
 		
-		System.out.println(worker);
+		int c_month = Integer.parseInt(dateIncome.substring(0, 2));
+		
+		System.out.println(c_month);
 		
 		sc.close();
 
