@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 
-import entities.Product;
+import entities._Product;
 
 public class ProgramProduct {
 
@@ -29,7 +29,7 @@ public class ProgramProduct {
 		//int quantity = sc.nextInt(); //CRIANDO VARIAVEL AUXILIAR PARA O CONSTRUCTOR
 		
 		//CHAMANDO E INSTANCIANDO O CONSTRUCTOR
-		Product product = new Product(name, price);
+		_Product product = new _Product(name, price);
 		
 				
 		//TESTE DE EMCAPSULAMENTO:
