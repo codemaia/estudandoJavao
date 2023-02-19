@@ -1,7 +1,11 @@
 package application;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
+
+import entities.Client;
 
 public class ProgramOrder {
 
@@ -10,6 +14,8 @@ public class ProgramOrder {
 		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
+		
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		
 		System.out.println("Enter clien data:");
 		
@@ -20,7 +26,13 @@ public class ProgramOrder {
 		String emailClient = sc.next();
 		
 		System.out.print("Birth date (DD/MM/YYYY): ");
-		String birthDate = sc.next();
+		//LocalDate birthDate = LocalDate.parse(sc.next(), formatter);
+		String date = sc.next();
+		LocalDate birthDate = LocalDate.parse(date, formatter);
+		
+		Client client = new Client(nameClient, emailClient, birthDate);
+		
+		System.out.println(client);
 		
 		
 		sc.close();
