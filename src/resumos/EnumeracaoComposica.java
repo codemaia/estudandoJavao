@@ -5,7 +5,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.OrderStudy;
-import entities.enums.OrderStatus;
+import entities.enums._OrderStatus;
 
 public class EnumeracaoComposica {
 
