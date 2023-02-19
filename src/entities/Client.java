@@ -47,9 +47,8 @@ public class Client {
 
 	@Override
 	public String toString() {
-		
-		//LocalDate birthDate = LocalDate.parse(birthDate, formatter);
-		return "Client [name=" + name + ", email=" + email + ", birthDate=" + birthDate + "]";
+		return name + " (" + formatter.format(birthDate) + ") - " + email;
+			  
 	}
 	
 	

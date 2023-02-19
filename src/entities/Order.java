@@ -1,12 +1,15 @@
 package entities;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 import entities.enums.OrderStatus;
 
 public class Order {
+	
+	private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 	
 	private LocalDateTime moment;
 	private OrderStatus status;
@@ -74,7 +77,15 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "Order [moment=" + moment + ", status=" + status + ", items=" + items + ", client=" + client + "]";
+		StringBuilder sb = new StringBuilder();
+		sb.append("Order moment: ");
+		sb.append(formatter.format(moment) + "\n");
+		sb.append("Order Status: ");
+		sb.append(status + "\n");
+		sb.append("Client: ");
+		sb.append(client);
+		
+		return sb.toString();
 	}
 	
 	

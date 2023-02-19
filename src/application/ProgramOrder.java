@@ -1,12 +1,15 @@
 package application;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import entities.Client;
+import entities.Order;
 import entities.OrderItem;
 import entities.Product;
+import entities.enums.OrderStatus;
 
 public class ProgramOrder {
 
@@ -36,32 +39,36 @@ public class ProgramOrder {
 		//System.out.println(client);
 		System.out.println("Enter order data:");
 		System.out.print("Status: ");
-		String orderStatus = sc.next();
+		OrderStatus status = OrderStatus.valueOf(sc.next());
+		
+		Order order = new Order(LocalDateTime.now(), status, client);
 		
 		System.out.print("How many items to this order? ");
 		int n = sc.nextInt();
 		
-		OrderItem orderItem = new OrderItem();
-		
 		for (int i = 1; i <= n; i++) {
 			System.out.println("Enter #" + i + " item data:");
 			System.out.print("Product name: ");
-			String productName = sc.next();
+			sc.nextLine();
+			String productName = sc.nextLine();
 			
 			System.out.print("Product price: ");
 			Double productPrice = sc.nextDouble();
 			
+			Product product = new Product(productName, productPrice);
+			
 			System.out.print("Quantity: ");
 			Integer quantity = sc.nextInt();
+		
+			OrderItem orderItem = new OrderItem(quantity, productPrice, product);
 			
-			Product product = new Product(productName, productPrice);
-			orderItem = new OrderItem(quantity, productPrice);
-			orderItem.addProduct(product);
+			order.addItem(orderItem);
 			
-			System.out.println(orderItem);
 		}
+		System.out.println();
 		
-		
+		System.out.println("ORDER SUMMARY:");
+		System.out.println(order);
 			
 		
 		sc.close();
