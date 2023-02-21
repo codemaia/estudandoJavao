@@ -17,7 +17,12 @@ public class HerancaPolimorfismo {
 		 * É um tipo de associação que permite que uma classe herde todos dados
 		 *  e comportamentos de outra
 		 *  
-		 *  Definiçoes importantes
+		 *  #Definiçoes importantes
+		 *  	Relação "é um"
+		 *  	- Generalização / especialização
+		 *  	- Superclasse (Classe base)	/ subclasse (classe derivada)
+		 *  	- Herança / extensão
+		 *  	- Herança é uma associação entre classes (e nao entre objetos)
 		 *  
 		 *  #Vantagens
 		 *   - Reuso
@@ -25,6 +30,8 @@ public class HerancaPolimorfismo {
 		 *   
 		 *  #Sintaxe
 		 *   - class A extends B;
+		 *   
+		 *   
 		 * 
 		 */
 		
