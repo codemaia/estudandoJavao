@@ -36,6 +36,26 @@ public class HerancaPolimorfismo {
 		 */
 		
 		
+		
+		// UPCASTING E DOWNCASTING
+		
+		
+		/**
+		 * # UPCASTING
+		 * 	- Casting da subclasse para a superclasse
+		 *  - Uso comum; polimorfismo
+		 *  
+		 *  
+		 * # DOWNCASTING
+		 * 	- Casting da superclasse para a subclasse
+		 *  - Palavra instanceof -> Serve para comparar as instancias das classes
+		 *  - Uso comum: métodos que recebem parâmetros genéricos (ex: Equals)
+		 * 
+		 */
+		
+		
+		
+		
 		sc.close();
 	}
 
