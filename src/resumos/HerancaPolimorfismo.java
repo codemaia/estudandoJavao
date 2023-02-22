@@ -40,14 +40,14 @@ public class HerancaPolimorfismo {
 		
 		
 		// UPCASTING
-		AccountHeranca acc1 = new BusinessAccountHeranca(111, "Renan", 0.0, 100.0);
+		AccountHeranca acc10 = new BusinessAccountHeranca(111, "Renan", 0.0, 100.0);
 										
 		// DOWNCASTING					//CASTING
-		BusinessAccountHeranca acc2 = (BusinessAccountHeranca) acc1;
-		System.out.println(acc1);
+		BusinessAccountHeranca acc20 = (BusinessAccountHeranca) acc10;
+		//System.out.println(acc10);
 		
-		acc2.loan(100.0);
-		System.out.println(acc1);
+		acc20.loan(100.0);
+		//System.out.println(acc10);
 		
 		
 		// UPCASTING E DOWNCASTING
@@ -67,7 +67,29 @@ public class HerancaPolimorfismo {
 		 */
 		
 		
+		AccountHeranca acc = new AccountHeranca(1001, "Alex", 0.0);
+		BusinessAccountHeranca bacc = new BusinessAccountHeranca(1002, "Maria", 0.0, 500.0);
 		
+		
+		// UPCASTING
+		AccountHeranca acc1 = bacc;
+		AccountHeranca acc2 = new BusinessAccountHeranca(1003, "Bob", 0.0, 200.0);
+		//AccountHeranca acc3 = 
+		
+		
+		/**
+		 *    NECESSARIO CRIAR A CLASSE SavingsAccount
+		 */
+		
+		
+		
+		// DOWNCASTING					 //CASTING
+		BusinessAccountHeranca acc4 = (BusinessAccountHeranca)acc2;
+		acc4.loan(100.0);
+		
+		
+		System.out.println(acc1);
+		System.out.println(acc4);
 		
 		sc.close();
 	}
