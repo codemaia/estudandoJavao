@@ -23,7 +23,21 @@ public class BusinessAccountHeranca extends AccountHeranca{
 	
 	
 	public void loan(Double amount) {
-		balance += amount;
+		if (amount <= loanLimit) {
+			balance += amount - 10.0;			
+		} else {
+			System.out.print("Não é possivel realizar o emprestim, verifique o seu limite");
+		}
 	}
+
+	@Override
+	public String toString() {
+		return "Account: " + number
+			   + " Holder: " + holder
+			   + " Balance: " + balance
+			   + " loanLimit: " + loanLimit;
+	}
+	
+	
 	
 }

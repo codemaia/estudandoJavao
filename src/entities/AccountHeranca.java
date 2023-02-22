@@ -2,8 +2,8 @@ package entities;
 
 public class AccountHeranca {
 	
-	private Integer number;
-	private String holder;
+	protected Integer number;
+	protected String holder;
 	protected Double balance;
 	
 	public AccountHeranca() {
@@ -48,5 +48,11 @@ public class AccountHeranca {
 	public void deposit(Double amount) {
 		balance += amount;
 	}
+
+	@Override
+	public String toString() {
+		return "AccountHeranca [number=" + number + ", holder=" + holder + ", balance=" + balance + "]";
+	}
+	
 	
 }

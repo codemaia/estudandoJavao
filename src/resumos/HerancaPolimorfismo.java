@@ -2,6 +2,9 @@ package resumos;
 
 import java.util.Scanner;
 
+import entities.AccountHeranca;
+import entities.BusinessAccountHeranca;
+
 public class HerancaPolimorfismo {
 
 	public static void main(String[] args) {
@@ -36,7 +39,12 @@ public class HerancaPolimorfismo {
 		 */
 		
 		
+		BusinessAccountHeranca acc1 = new BusinessAccountHeranca(111, "Renan", 0.0, 100.0);
 		
+		System.out.println(acc1);
+		
+		acc1.loan(100.0);
+		System.out.println(acc1);
 		
 		
 		// UPCASTING E DOWNCASTING

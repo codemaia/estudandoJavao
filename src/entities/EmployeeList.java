@@ -43,7 +43,7 @@ public class EmployeeList {
 	
 	
 	public void increaseSalary(Double percentage) {
-		salary += salary * percentage/100;
+		salary += salary * percentage/100 ;
 	}
 
 	
