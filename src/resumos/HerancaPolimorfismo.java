@@ -39,11 +39,14 @@ public class HerancaPolimorfismo {
 		 */
 		
 		
-		BusinessAccountHeranca acc1 = new BusinessAccountHeranca(111, "Renan", 0.0, 100.0);
-		
+		// UPCASTING
+		AccountHeranca acc1 = new BusinessAccountHeranca(111, "Renan", 0.0, 100.0);
+										
+		// DOWNCASTING					//CASTING
+		BusinessAccountHeranca acc2 = (BusinessAccountHeranca) acc1;
 		System.out.println(acc1);
 		
-		acc1.loan(100.0);
+		acc2.loan(100.0);
 		System.out.println(acc1);
 		
 		
