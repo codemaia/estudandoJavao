@@ -15,7 +15,7 @@ public class HerancaPolimorfismo {
 		
 		
 		
-		// HERANÇA
+		// HERANÇA ############################################################
 		
 		/*
 		 * É um tipo de associação que permite que uma classe herde todos dados
@@ -51,7 +51,7 @@ public class HerancaPolimorfismo {
 		//System.out.println(acc10);
 		
 		
-		// UPCASTING E DOWNCASTING
+		// UPCASTING E DOWNCASTING ##################################
 		
 		
 		/**
@@ -82,7 +82,7 @@ public class HerancaPolimorfismo {
 		// DOWNCASTING					 //CASTING
 		BusinessAccountHeranca acc4 = (BusinessAccountHeranca)acc2;
 		acc4.loan(100.0);
-		
+		acc4.withdraw(10.0);
 		
 		//error, acc3 não é BusinessAccount e sim SavingsAccount
 		//BusinessAccountHeranca acc5 = (BusinessAccountHeranca)acc3;
@@ -106,6 +106,30 @@ public class HerancaPolimorfismo {
 		System.out.println(acc1);
 		System.out.println(acc4);
 		//System.out.println(acc5);
+		
+		
+		
+		
+		// SOBREPOSIÇÃO OU SOBRESCRITA ##########################################
+		
+		
+		/*
+		 * É a implementação de um método de uma superclasse na subclasse
+		 * 
+		 * É fortemente recomendável usar a notação @Override em um método sobrescrito
+		 * 
+		 * 
+		 */
+		
+		
+		AccountHeranca acc6 = new SavingsAccountHeranca(1006, "Renan Poupança", 0.0, 0.1);
+		acc6.deposit(100.0);
+		
+		System.out.println("SavingsAccount acc6: " + acc6);
+		
+		acc6.withdraw(10.0);
+		
+		System.out.println("SavingsAccount acc6: " + acc6);
 		
 		sc.close();
 	}

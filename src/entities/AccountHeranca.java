@@ -42,7 +42,7 @@ public class AccountHeranca {
 	}
 	
 	public void withdraw(Double amount) {
-		balance -= amount;
+		balance -= amount + 5.0;
 	}
 	
 	public void deposit(Double amount) {
