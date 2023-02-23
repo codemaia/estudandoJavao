@@ -158,6 +158,42 @@ public class HerancaPolimorfismo {
 		System.out.println(acc2);
 		
 		
+		
+		
+		
+		
+		// POLIMORFISMO ############################################################
+		
+		/*
+		 * @ PILARES DA OOP
+		 * 
+		 * 	- Encapsulamento (private) 
+		 * 	- Herança (extends)
+		 * 	- Polimorfismo
+		 * 	
+		 * 	
+		 * 	@ Em programação orientada a objetos, polimorfismo é o recurso que permite
+		 * 	que variaveis de um mesmo tipo mais genérico possam apontar para objetos
+		 * 	de tipos especificos diferentes, tendo assim comportamentos diferentes conforme
+		 * 	cada tipo especifico.
+		 * 
+		 *  EX:
+		 *  
+		 */
+		
+			AccountHeranca x = new AccountHeranca(1020, "Renan", 1000.0);
+			AccountHeranca y = new SavingsAccountHeranca(1023, "Livia", 1000.0, 0.01);
+			
+			
+			x.withdraw(50.0);
+			y.withdraw(50.0);
+			
+			System.out.println(x.getBalance()); //945
+			System.out.println(y.getBalance()); //950
+		
+			
+			
+			
 		sc.close();
 	}
 
