@@ -29,6 +29,12 @@ public class BusinessAccountHeranca extends AccountHeranca{
 			System.out.print("Não é possivel realizar o emprestim, verifique o seu limite");
 		}
 	}
+	
+	@Override
+	public void withdraw(Double amount) {
+		super.withdraw(amount);
+		balance -= 2.0;
+	}
 
 	@Override
 	public String toString() {

@@ -131,6 +131,33 @@ public class HerancaPolimorfismo {
 		
 		System.out.println("SavingsAccount acc6: " + acc6);
 		
+		
+		
+		// PALAVRA SUPER ##########################################################
+			
+		/*
+		 * É possivel chamar a implementação da superclasse usando a palavra super.
+		 * 
+		 *  Exemplo: suponha que, na classe BusinessAccount, a regra para saque seja realizar o
+			saque normalmente da superclasse, e descontar mais 2.0.
+			
+			
+			@Override
+			public void withdraw(Double amount) {
+				super.withdraw(amount);
+				balance -= 2.0;
+			}
+			
+			
+		 */
+		
+		acc2.deposit(17.0);
+		System.out.println(acc2);
+		
+		acc2.withdraw(5.0);
+		System.out.println(acc2);
+		
+		
 		sc.close();
 	}
 
