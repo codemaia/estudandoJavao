@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import entities.AccountHeranca;
 import entities.BusinessAccountHeranca;
+import entities.SavingsAccountHeranca;
 
 public class HerancaPolimorfismo {
 
@@ -74,12 +75,7 @@ public class HerancaPolimorfismo {
 		// UPCASTING
 		AccountHeranca acc1 = bacc;
 		AccountHeranca acc2 = new BusinessAccountHeranca(1003, "Bob", 0.0, 200.0);
-		//AccountHeranca acc3 = 
-		
-		
-		/**
-		 *    NECESSARIO CRIAR A CLASSE SavingsAccount
-		 */
+		AccountHeranca acc3 = new SavingsAccountHeranca(1004, "Ana", 0.0, 0.1);
 		
 		
 		
@@ -88,8 +84,28 @@ public class HerancaPolimorfismo {
 		acc4.loan(100.0);
 		
 		
+		//error, acc3 não é BusinessAccount e sim SavingsAccount
+		//BusinessAccountHeranca acc5 = (BusinessAccountHeranca)acc3;
+		
+		// MODO CORRETO:
+		if (acc3 instanceof BusinessAccountHeranca) {
+			BusinessAccountHeranca acc5 = (BusinessAccountHeranca)acc3;
+			acc5.loan(200.0);
+			System.out.println("LOAN!");
+		}
+		
+		if (acc3 instanceof SavingsAccountHeranca ) {
+			SavingsAccountHeranca acc5 = (SavingsAccountHeranca)acc3;
+			acc5.updateBalance();
+			System.out.println("UPDATE!");
+			
+		}
+		
+		
+		
 		System.out.println(acc1);
 		System.out.println(acc4);
+		//System.out.println(acc5);
 		
 		sc.close();
 	}
