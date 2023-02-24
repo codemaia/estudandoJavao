@@ -162,6 +162,67 @@ public class HerancaPolimorfismo {
 		
 		
 		
+		
+		
+		// CLASSES E METODOS FINAL ##########################################
+		
+		/*
+		 * @ Palavra chave: final
+		 * 
+		 * 	 @ Classe: evita que a classe seja herdada
+		 * 		
+		 * 		public final class SavingsAccount {
+		 * 
+		 * 		}
+		 * 
+		 * 	
+		 * 	 @ Metodo: evita que o metodo seja sobreposto
+		 * 
+		 * 
+		 * 	Suponha que voce queira evitar que sejam criadas subclasses
+		 * 	de SavingsAccount
+		 * 
+		 * 		public final class SavingsAccount {
+		 * 			(...)
+		 * 
+		 * 
+		 * 	@ Metodo final
+		 * 
+		 * 		Suponha que voce nao queira que o metodo withdraw de SavingsAccount
+		 * 		seja sobreposto
+		 * 
+		 * 		
+		 * 		@Override
+		 * 		public final void withdraw(Double amount) {
+		 * 		
+		 * 			balance -= amount;
+		 * 		}
+		 * 
+		 * 	
+		 * 	@ PRA QUE?
+		 * 
+		 * 		# Segurança: dependendo das regras de negocio, as vezes é desejavel
+		 * 			garantir que uma classe nao seja herdada, ou que um metodo nao seja
+		 * 			sobreposto.
+		 * 		  - Geralmente convem acrescentar final em metodos sobrepostos, pois 
+		 * 			sobreposical multiplas podem ser uma porta de entrada para 
+		 * 			inconsistencias.
+		 * 
+		 * 		
+		 * 		# Performance: atributos de tipo de uma classe final são analisados	 de
+		 * 			forma mais rapida em tempo de execucao.
+		 * 			Exemplo classico: String
+		 * 
+		 *  
+		 */
+		
+		
+		
+		
+		
+		
+		
+		
 		// POLIMORFISMO ############################################################
 		
 		/*
