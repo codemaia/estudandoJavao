@@ -3,7 +3,7 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import applicationTwo.Product;
+import entities_2.Product;
 
 public class ProgramProductHeranca {
 

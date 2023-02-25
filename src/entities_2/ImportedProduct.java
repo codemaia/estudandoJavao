@@ -1,4 +1,4 @@
-package applicationTwo;
+package entities_2;
 
 public class ImportedProduct extends Product {
 	
@@ -21,11 +21,15 @@ public class ImportedProduct extends Product {
 		this.customFee = customFee;
 	}
 	
+	
+	public Double totalPrice() {
+		return price + customFee;
+	}
+	
 	@Override
 	public String priceTag() {
-		//StringBuilder sb = new StringBuilder();
-		return name;
-		//return  + "(Custom fee: $ " + customFee + ")"; 
+		return name + " $ " + totalPrice() + " (Customs fee: $ " + customFee +")";
+	 
 	}
 	
 }
