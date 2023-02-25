@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+import javax.swing.plaf.synth.SynthScrollBarUI;
+
 import entities.Employee;
 import entities.EmployeeHeranca;
 import entities.OutsourcedEmployee;
@@ -78,7 +80,12 @@ public class ProgramEmployeeHeranca {
 			
 		}
 		
-		System.out.println(empList + "\n");
+		System.out.println();
+		
+		System.out.println("PAYMENTS:");
+		for (EmployeeHeranca emp : empList) {
+			System.out.println(emp);
+		}
 		
 		sc.close();
 
