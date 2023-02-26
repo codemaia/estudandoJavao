@@ -1,16 +1,12 @@
 package entities_2;
 
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
-import java.util.Locale;
+
 
 public class UsedProduct extends Product {
 	
 	private LocalDateTime manufactureDate;
-	
-	DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-	
+		
 	public UsedProduct() {
 		super();
 	}
