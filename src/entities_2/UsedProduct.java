@@ -1,26 +1,25 @@
 package entities_2;
 
-import java.time.LocalDateTime;
-
+import java.time.LocalDate;
 
 public class UsedProduct extends Product {
 	
-	private LocalDateTime manufactureDate;
+	private LocalDate manufactureDate;
 		
 	public UsedProduct() {
 		super();
 	}
 
-	public UsedProduct(String name, Double price, LocalDateTime manufactureDate) {
+	public UsedProduct(String name, Double price, LocalDate manufactureDate) {
 		super(name, price);
 		this.manufactureDate = manufactureDate;
 	}
 
-	public LocalDateTime getManufactureDate() {
+	public LocalDate getManufactureDate() {
 		return manufactureDate;
 	}
 
-	public void setManufactureDate(LocalDateTime manufactureDate) {
+	public void setManufactureDate(LocalDate manufactureDate) {
 		this.manufactureDate = manufactureDate;
 	}
 	
