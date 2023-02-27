@@ -1,12 +1,15 @@
 package application;
 
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities_2.ImportedProduct;
 import entities_2.Product;
+import entities_2.UsedProduct;
 
 public class ProgramProductHeranca {
 
@@ -56,6 +59,25 @@ public class ProgramProductHeranca {
 			if (productType == 'c') {
 				Product prod = new Product(name, price);
 				
+				prods.add(prod);
+			}
+			
+			if (productType == 'u') {
+				System.out.print("Manufacture date (DD/MM/YYYY): ");
+				sc.nextLine();
+				String dateStr = sc.nextLine();
+				
+				LocalDate date = LocalDate.parse(dateStr, formatter);
+				
+				Product prod = new UsedProduct(name, price, date);
+				prods.add(prod);
+			}
+			
+			if (productType == 'i') {
+				System.out.print("Customs fee: ");
+				Double customsFee = sc.nextDouble();
+				
+				Product prod = new ImportedProduct(name, price, customsFee);
 				prods.add(prod);
 			}
 		}
