@@ -269,6 +269,8 @@ public class HerancaPolimorfismo {
 			 *  abstratas podem ser instanciadas, mas nunca a superclasse abstrata
 			 * 
 			 * 
+			 *  NOTAÇÃO UML: ITALICO
+			 * 
 			 *  <SINTAXE>
 			 *  	public abstract class Account {
 			 *  		(...)
@@ -316,6 +318,36 @@ public class HerancaPolimorfismo {
 			for (AccountHeranca account : list) {
 				System.out.println("Updated Account: " + account.getNumber() + " Balance: " + account.getBalance());
 			}
+			
+			
+			
+			
+			
+			
+			// METODOS ABSTRATOS ############################################################
+			
+			/*
+			 *  @ São metodos que não possuem implementação
+			 *  
+			 *  @ Métodos precisam ser abstratos quando a classe é generica
+			 *   demais para conter sua implementação
+			 *   
+			 *  @ Se uma classe possuir pelo menos um metodo abstrato, entao
+			 *   esta classe também é abstrata.
+			 *   
+			 *   
+			 *   NOTACAO UML : ITALICO
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+			
+			
+			
+			
+			
+			
 			
 		sc.close();
 	}
