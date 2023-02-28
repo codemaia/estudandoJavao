@@ -84,6 +84,7 @@ public class ProgramProductHeranca {
 		
 		System.out.println();
 		
+		System.out.println("PRICE TAGS:");
 		for (Product p : prods) {
 			System.out.println(p.priceTag());
 		}
