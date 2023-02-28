@@ -1,6 +1,6 @@
 package entities;
 
-public class AccountHeranca {
+public abstract class AccountHeranca {
 	
 	protected Integer number;
 	protected String holder;

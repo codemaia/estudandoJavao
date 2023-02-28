@@ -6,7 +6,7 @@ public class OutsourcedEmployee extends EmployeeHeranca{
 	
 	
 	public OutsourcedEmployee() {
-		
+		super();
 	}
 
 	public OutsourcedEmployee(String name, Integer hours, Double valuePerHour, Double additionalCharge) {
@@ -25,7 +25,7 @@ public class OutsourcedEmployee extends EmployeeHeranca{
 	
 	@Override
 	public Double payment() {
-		return hours * valuePerHour + additionalCharge * 1.1;
+		return super.payment() + additionalCharge * 1.1;
 	}
 	
 }

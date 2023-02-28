@@ -1,5 +1,7 @@
 package resumos;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import entities.AccountHeranca;
@@ -68,7 +70,7 @@ public class HerancaPolimorfismo {
 		 */
 		
 		
-		AccountHeranca acc = new AccountHeranca(1001, "Alex", 0.0);
+		//AccountHeranca acc = new AccountHeranca(1001, "Alex", 0.0);
 		BusinessAccountHeranca bacc = new BusinessAccountHeranca(1002, "Maria", 0.0, 500.0);
 		
 		
@@ -242,18 +244,78 @@ public class HerancaPolimorfismo {
 		 *  
 		 */
 		
-			AccountHeranca x = new AccountHeranca(1020, "Renan", 1000.0);
+			//AccountHeranca x = new AccountHeranca(1020, "Renan", 1000.0);
 			AccountHeranca y = new SavingsAccountHeranca(1023, "Livia", 1000.0, 0.01);
 			
 			
-			x.withdraw(50.0);
+			//x.withdraw(50.0);
 			y.withdraw(50.0);
 			
-			System.out.println(x.getBalance()); //945
+			//System.out.println(x.getBalance()); //945
 			System.out.println(y.getBalance()); //950
 		
 			
 			
+			
+		
+			
+			// CLASSES ABSTRATAS ############################################################
+			
+			/*
+			 *  @ São classes que não podem ser instanciadas
+			 *  
+			 *  
+			 *  @ É uma forma de garantir herança total: somente subclasses não
+			 *  abstratas podem ser instanciadas, mas nunca a superclasse abstrata
+			 * 
+			 * 
+			 *  <SINTAXE>
+			 *  	public abstract class Account {
+			 *  		(...)
+			 *  	}
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+			
+			
+			//AccountHeranca acc11 = new AccountHeranca(1001, "Renan", 1000.0);  <- CLASSE ABSTRATA - NAO PODE SER INSTANCIADA
+			// não é possivel instanciar AccountHeranca pois a mesma foi alterada
+			// para uma classe abstrata;
+			
+			AccountHeranca acc22 = new SavingsAccountHeranca(1002, "Tita", 1000.0, 0.01);
+			AccountHeranca acc33 = new BusinessAccountHeranca(1003, "Livia", 1000.0, 500.0);
+			
+			/*
+			 * A superclasse generica nos permite tratar de forma facil e uniforme todos os
+			 * tipos de conta, inclusive com polimorfismo se for o caso. Por exemplo, voce
+			 * pode colocar todos os tipos de contas em uma mesma coleção.
+			 * 
+			 * Segue exemplo a baixo: 
+			 */
+			
+			List<AccountHeranca> list = new ArrayList<>();
+			
+			list.add(new BusinessAccountHeranca(1101, "Renan", 1000.0, 500.0));
+			list.add(new SavingsAccountHeranca(1102, "Livia", 1000.0, 0.01));
+			list.add(new BusinessAccountHeranca(1103, "Tita", 1000.0, 500.0));
+			list.add(new SavingsAccountHeranca(1104, "Brisa", 1000.0, 0.01));
+			
+			
+			Double sum = 0.0;
+			for (AccountHeranca account : list) {
+				sum += account.getBalance();
+			}
+			
+			System.out.println("Total accounts is: " + sum);
+			
+			for (AccountHeranca account : list) {
+				account.deposit(10.0);
+			}
+			for (AccountHeranca account : list) {
+				System.out.println("Updated Account: " + account.getNumber() + " Balance: " + account.getBalance());
+			}
 			
 		sc.close();
 	}
