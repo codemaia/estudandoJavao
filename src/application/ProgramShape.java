@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 import entities.enums.Color;
 import entities_2.Circle;
