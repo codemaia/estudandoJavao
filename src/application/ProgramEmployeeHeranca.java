@@ -5,9 +5,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import javax.swing.plaf.synth.SynthScrollBarUI;
 
-import entities.Employee;
 import entities.EmployeeHeranca;
 import entities.OutsourcedEmployee;
 
