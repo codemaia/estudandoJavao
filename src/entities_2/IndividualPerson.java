@@ -32,11 +32,14 @@ public class IndividualPerson extends Person{
 		
 		if (getAnualIncome() <= 20000.0 && healthExpenditures == 0.0) {
 			tax = getAnualIncome() * 0.15;
+			
 		} else if (getAnualIncome() > 20000.0 && healthExpenditures > 0.0) {
 			tax = (getAnualIncome() * 0.25) - (healthExpenditures * 0.50);
-		}
+			
+		} // falta adicionar mais uma condição
 		
 		return tax;
+		
 	}
 
 }
