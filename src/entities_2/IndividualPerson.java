@@ -28,7 +28,13 @@ public class IndividualPerson extends Person{
 	@Override
 	public Double taxPaid() {
 		// TODO Auto-generated method stub
-		return null;
+		Double tax = 0.0;
+		
+		if (getAnualIncome() <= 20000.0) {
+			tax = getAnualIncome() * 0.15;
+		}
+		
+		return tax;
 	}
 
 }

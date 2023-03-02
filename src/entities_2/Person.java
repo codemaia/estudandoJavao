@@ -33,5 +33,6 @@ public abstract class Person {
 	
 	
 	public abstract Double taxPaid();
+
 	
 }
