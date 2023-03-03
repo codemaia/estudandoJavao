@@ -1,5 +1,6 @@
 package resumos;
 
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -65,6 +66,59 @@ public class TratamentoExcecoes {
 		 * 
 		 */
 		
+		
+		
+		
+		// # ESTRUTURA TRY-CATCH
+		
+		
+		/*
+		 * 
+		 * Estrutura try-catch
+		 * 
+		 * 	# Bloco try
+		 * 	 - Contém o código que representa a execução normal do trecho de código que 
+		 * 		pode acarretar em uma exceção
+		 * 
+		 * 
+		 *  # Bloco catch
+		 *   - Contém o código a ser executado caso uma exceção ocorra
+		 *   - Deve ser especificado o tipo da exceção a ser tratada (upcasting é permitido)
+		 *   
+		 *   
+		 *   
+		 *   Sintaxe
+		 *   
+		 *   
+		 *   try {
+		 *   	Logica que podera acarretar em um erro
+		 *   }
+		 *   catch (ExceptionType e) {
+		 *   	captura e tratamento do erro.
+		 *   }
+		 *   catch (ExceptionType e) { -> Tipo do erro + apelido
+		 *   	posso ter quantos catch for necessário
+		 *   }
+		 *  
+		 * 
+		 * 
+		 * 
+		 */
+		
+		
+		
+		try {
+			
+			String[] vect = sc.nextLine().split(" ");
+			int position = sc.nextInt();
+			System.out.println(vect[position]);
+		} 
+		catch (InputMismatchException e) {
+			System.out.println("Error - Digite um numero inteiro");
+		} 
+		
+		
+		System.out.println("End Program");
 		
 		
 		
