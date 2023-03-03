@@ -27,8 +27,15 @@ public class CompanyPerson extends Person {
 
 	@Override
 	public Double taxPaid() {
-		// TODO Auto-generated method stub
-		return null;
+		Double tax = 0.0;
+		
+		if (numberEmployees < 10) {
+			tax = getAnualIncome() * 0.16;
+		} else {
+			tax = getAnualIncome() * 0.14;
+		}
+		
+		return tax;
 	}
 
 }
