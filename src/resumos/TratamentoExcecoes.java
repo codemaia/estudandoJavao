@@ -179,9 +179,12 @@ public class TratamentoExcecoes {
 		 *   
 		 *   }
 		 * 
+		 *  ## Sempre é executado!
 		 * 
 		 */
 		
+		
+		/*
 		File file = new File("E:\\java.txt");
 		Scanner sc2 = null;
 		
@@ -202,6 +205,37 @@ public class TratamentoExcecoes {
 			
 			System.out.println("Finally block executed");
 		}
+		*/
+		
+		
+		
+		
+		
+		
+		
+		// # CRIANDO EXCECOES PERSONALIZADAS
+		
+		/*
+		 * 
+		 *  @ SUGESTAO DE PACOTES "MODEL"
+		 * 		
+		 * 		MODEL 
+		 *        L entities
+		 *        L enums
+		 *        L exception
+		 *        L services
+		 * 
+		 * 
+		 */
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		sc.close();
