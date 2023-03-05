@@ -116,9 +116,11 @@ public class TratamentoExcecoes {
 		catch (InputMismatchException e) {
 			System.out.println("Error - Digite um numero inteiro");
 		} 
+		catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println(e + " é um erro que ocorro quando não encontro a posicao do array");
+		}
 		
-		
-		System.out.println("End Program");
+		System.out.println("End of Program");
 		
 		
 		
