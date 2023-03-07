@@ -48,6 +48,11 @@ public class Reservation {
 		return diff;
 	}
 
+	
+	public void updateDates(LocalDate checkIn, LocalDate checkOut) {
+		this.checkIn = checkIn;
+		this.checkOut = checkIn;
+	}
 
 	@Override
 	public String toString() {
