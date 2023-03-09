@@ -51,7 +51,7 @@ public class Reservation {
 	
 	public void updateDates(LocalDate checkIn, LocalDate checkOut) {
 		this.checkIn = checkIn;
-		this.checkOut = checkIn;
+		this.checkOut = checkOut;
 	}
 
 	@Override
