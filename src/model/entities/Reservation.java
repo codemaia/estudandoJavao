@@ -51,11 +51,10 @@ public class Reservation {
 	
 	public void updateDates(LocalDate checkIn, LocalDate checkOut) {
 		
-		LocalDate now = LocalDate.now();
+		//LocalDate now = LocalDate.now();
 		
-		if (checkIn.isBefore(now) || checkOut.isBefore(now)) {
-			
-			System.out.println("Reservation dates for update must be future dates");
+		if (checkIn.isBefore(checkIn) || checkOut.isBefore(checkOut)) {
+			throw new DomainException("Error in reservation: Reservation dates for update must be future dates");
 		}
 		
 		this.checkIn = checkIn;
