@@ -53,7 +53,7 @@ public class Reservation {
 		
 		//LocalDate now = LocalDate.now();
 		
-		if (getCheckIn().isBefore(checkIn) || getCheckOut().isBefore(checkOut)) {
+		if (checkIn.isBefore(getCheckIn()) || checkOut.isBefore(getCheckOut())) {
 			throw new DomainException("Error in reservation: Reservation dates for update must be future dates");
 		}
 		

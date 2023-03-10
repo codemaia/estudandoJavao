@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
+import model.entities.DomainException;
 import model.entities.Reservation;
 
 public class ProgramReservation {
@@ -46,32 +47,39 @@ public class ProgramReservation {
 		*/
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		
-		System.out.println("**** RESERVATIONS ****");
-		System.out.print("Room number: ");
-		Integer roomNumber = sc.nextInt();
+		try {
+			
+			System.out.println("**** RESERVATIONS ****");
+			System.out.print("Room number: ");
+			Integer roomNumber = sc.nextInt();
+			
+			System.out.print("Check-in date (dd/MM/yyyy): ");
+			LocalDate checkIn = LocalDate.parse(sc.next(), fmt);
+			
+			System.out.print("Check-out date (dd/MM/yyyy): ");
+			LocalDate checkOut = LocalDate.parse(sc.next(), fmt);
+			
+			Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
+			
+			System.out.println(reservation);
 		
-		System.out.print("Check-in date (dd/MM/yyyy): ");
-		LocalDate checkIn = LocalDate.parse(sc.next(), fmt);
+			System.out.println();
+			
+			System.out.println("Enter data to update the reservation:");
+			System.out.print("Check-in date (dd/MM/yyyy): ");
+			checkIn = LocalDate.parse(sc.next(), fmt);
+			
+			System.out.print("Check-out date (dd/MM/yyyy): ");
+			checkOut = LocalDate.parse(sc.next(), fmt);
+			
+			reservation.updateDates(checkIn, checkOut);
+			
+			System.out.println(reservation);
 		
-		System.out.print("Check-out date (dd/MM/yyyy): ");
-		LocalDate checkOut = LocalDate.parse(sc.next(), fmt);
-		
-		Reservation reservation = new Reservation(roomNumber, checkIn, checkOut);
-		
-		System.out.println(reservation);
-	
-		System.out.println();
-		
-		System.out.println("Enter data to update the reservation:");
-		System.out.print("Check-in date (dd/MM/yyyy): ");
-		checkIn = LocalDate.parse(sc.next(), fmt);
-		
-		System.out.print("Check-out date (dd/MM/yyyy): ");
-		checkOut = LocalDate.parse(sc.next(), fmt);
-		
-		reservation.updateDates(checkIn, checkOut);
-		
-		System.out.println(reservation);
+		}
+		catch (DomainException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		sc.close();
 		
