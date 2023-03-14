@@ -17,6 +17,11 @@ public class Reservation {
 
 
 	public Reservation(Integer roomNumber, LocalDate checkIn, LocalDate checkOut) {
+		
+		if (checkIn.isAfter(checkOut)) {
+			throw new DomainException("Error in reservation: Check-out date must be after check-in date");
+		}
+		
 		this.roomNumber = roomNumber;
 		this.checkIn = checkIn;
 		this.checkOut = checkOut;
@@ -51,12 +56,12 @@ public class Reservation {
 	
 	public void updateDates(LocalDate checkIn, LocalDate checkOut) {
 		
-		//LocalDate now = LocalDate.now();
 		
 		if (checkIn.isBefore(getCheckIn()) || checkOut.isBefore(getCheckOut())) {
 			throw new DomainException("Error in reservation: Reservation dates for update must be future dates");
 		}
 		
+			
 		this.checkIn = checkIn;
 		this.checkOut = checkOut;
 	}
