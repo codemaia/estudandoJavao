@@ -3,6 +3,8 @@ package application;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -79,6 +81,12 @@ public class ProgramReservation {
 		}
 		catch (DomainException e) {
 			System.out.println(e.getMessage());
+		}
+		catch (InputMismatchException e) {
+			System.out.println("Digite um número inteiro");
+		}
+		catch (DateTimeParseException e) {
+			System.out.println("Invalid date format");
 		}
 		
 		sc.close();
