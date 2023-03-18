@@ -12,7 +12,7 @@ public class Account {
 	}
 
 	public Account(Integer number, String holder, Double balance, Double withdrawLimit) {
-		super();
+		super();		
 		this.number = number;
 		this.holder = holder;
 		this.balance = balance;
@@ -32,7 +32,15 @@ public class Account {
 	}
 
 	public void setHolder(String holder) {
+		
+		/*
+		if (holder.matches((".*\\d+.*"))) {
+			throw new DomainException("Invalid holder");
+		}
+		*/
+		
 		this.holder = holder;
+		
 	}
 
 	public Double getBalance() {
@@ -61,6 +69,14 @@ public class Account {
 	
 	public void withdraw(Double amount) {
 		
+		if (amount > withdrawLimit) {
+			throw new DomainException("Withdraw error: The amount exceeds withdraw limite");
+		}
+		
+		if (amount > balance) {
+			throw new DomainException("Withdraw error: Not enough balance");
+		}
+		
 		balance -= amount;
 		
 	}
@@ -68,8 +84,7 @@ public class Account {
 
 	@Override
 	public String toString() {
-		return "Account [number=" + number + ", holder=" + holder + ", balance=" + balance + ", withdrawLimit="
-				+ withdrawLimit + "]";
+		return "New balance: " + balance;
 	}
 	
 	
