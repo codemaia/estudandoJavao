@@ -1,17 +1,18 @@
 package entities;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
-public class Parcela {
+public class Parcelamento {
     
     private LocalDate dataVencimento;
     private Double valor;
 
-    public Parcela () {
+    public Parcelamento () {
 
     }
 
-    public Parcela(LocalDate dataVencimento, Double valor) {
+    public Parcelamento(LocalDate dataVencimento, Double valor) {
         this.dataVencimento = dataVencimento;
         this.valor = valor;
     }
@@ -32,14 +33,12 @@ public class Parcela {
         this.valor = valor;
     }
 
+   
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Parcela{");
-        sb.append("dataVencimento=").append(dataVencimento);
-        sb.append(", valor=").append(valor);
-        sb.append('}');
-        return sb.toString();
+        return dataVencimento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) 
+               + " - " 
+               + String.format("%.2f", valor);
     }
 
 

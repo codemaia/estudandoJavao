@@ -1,12 +1,16 @@
 package entities;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Contrato {
     
     private int numeroContrato;
     private LocalDate date;
     private Double valorTotal;
+    
+    private List<Parcelamento> parcelamentos = new ArrayList<>();
 
     public Contrato () {
 
@@ -15,7 +19,7 @@ public class Contrato {
     public Contrato(int numeroContrato, LocalDate date, Double valorTotal) {
         this.numeroContrato = numeroContrato;
         this.date = date;
-        this.valorTotal = valorTotal;
+        this.valorTotal = valorTotal;  
     }
 
     public int getNumeroContrato() {
@@ -40,6 +44,10 @@ public class Contrato {
 
     public void setValorTotal(Double valorTotal) {
         this.valorTotal = valorTotal;
+    }
+
+    public List<Parcelamento> getParcelamentos() {
+        return parcelamentos;
     }
 
     @Override

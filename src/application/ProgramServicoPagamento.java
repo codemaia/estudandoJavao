@@ -1,10 +1,12 @@
 package application;
 
+import entities.Contrato;
+import entities.Parcelamento;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
-
-import entities.Contrato;
+import service.ContractService;
+import service.PaypalService;
 
 public class ProgramServicoPagamento {
     
@@ -23,22 +25,24 @@ public class ProgramServicoPagamento {
         System.out.print("Data (dd/MM/yyyy): ");
         String date = sc.next();
         LocalDate dataContrato = LocalDate.parse(date, formatter);
-        LocalDate dataContratoMais30diDias = dataContrato.plusDays(30);
 
         System.out.print("Valor do contrato: ");
         double valorContrato = sc.nextDouble();
 
+        Contrato obj = new Contrato(numberContract, dataContrato, valorContrato);
+
         System.out.print("Entre com o numero de parcelas: ");
         int numeroParcelas = sc.nextInt();
 
+        ContractService contractService = new ContractService(new PaypalService());
+
+        contractService.processContract(obj, numeroParcelas);
+
+
         System.out.println("Parcelas:");
-
-        contrato = new Contrato(numberContract, dataContrato, valorContrato);
-
-
-        System.out.println(contrato);
-        //System.out.println(dataContratoMais30diDias);
-      
+        for (Parcelamento parcelamento : obj.getParcelamentos()) {
+            System.out.println(parcelamento);
+        }
 
         sc.close();
     }
